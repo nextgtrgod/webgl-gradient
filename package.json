@@ -1,0 +1,16 @@
+{
+  "name": "glsl-template",
+  "author": "nextgtrgod",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "lil-gui": "^0.16.0",
+    "stats.js": "^0.17.0",
+    "vite": "^2.7.2"
+  },
+  "dependencies": {}
+}
