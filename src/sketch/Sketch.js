@@ -72,7 +72,8 @@ export default class Sketch {
 	setDebug() {
 		if (!this.debug.active) return
 
-		this.debug.ui.addColor(options, 'color')
+		this.debug.ui.addColor(options, 'color1')
+		this.debug.ui.addColor(options, 'color2')
 		this.debug.ui.add(options, 'scale', 0.01, 2, 0.001)
 		this.debug.ui.add(options, 'speed', 0.01, 4, 0.001)
 	}
@@ -80,7 +81,8 @@ export default class Sketch {
 	draw(elapsed) {
 		this.gl.uniform1f(this.gl.getUniformLocation(this.program, 'uTime'), elapsed)
 		this.gl.uniform2fv(this.gl.getUniformLocation(this.program, 'uResolution'), [ this.viewport.width, this.viewport.height ])
-		this.gl.uniform3fv(this.gl.getUniformLocation(this.program, 'uColor'), hexToRgb(options.color))
+		this.gl.uniform3fv(this.gl.getUniformLocation(this.program, 'uColor1'), hexToRgb(options.color1))
+		this.gl.uniform3fv(this.gl.getUniformLocation(this.program, 'uColor2'), hexToRgb(options.color2))
 		this.gl.uniform1f(this.gl.getUniformLocation(this.program, 'uScale'), options.scale)
 		this.gl.uniform1f(this.gl.getUniformLocation(this.program, 'uSpeed'), options.speed)
 

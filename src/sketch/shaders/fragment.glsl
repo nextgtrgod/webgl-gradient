@@ -3,7 +3,8 @@ precision highp float;
 
 uniform float uTime;
 uniform vec2 uResolution;
-uniform vec3 uColor;
+uniform vec3 uColor1;
+uniform vec3 uColor2;
 uniform float uScale;
 uniform float uSpeed;
 
@@ -97,9 +98,9 @@ void main() {
 
 	// color = clamp(color, vec3(0.0), vec3(1.0));
 	color = vec3(
-		map(color.r, 0.0, 1.0, uColor.r, 1.0),
-		map(color.g, 0.0, 1.0, uColor.g, 1.0),
-		map(color.b, 0.0, 1.0, uColor.b, 1.0)
+		map(color.r, 0.0, 1.0, uColor1.r, uColor2.r),
+		map(color.g, 0.0, 1.0, uColor1.g, uColor2.g),
+		map(color.b, 0.0, 1.0, uColor1.b, uColor2.b)
 	);
 
 	// gl_FragColor = vec4(displacedUv, 1.0, 1.0);
