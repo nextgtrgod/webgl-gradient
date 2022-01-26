@@ -1,8 +1,7 @@
 
 export const options = {
-	// color: '#47B2EE',
 	color1: '#2B71CA',
-	color2: '#FFFFFF',
+	color2: '#B7F1F5',
 	scale: 1,
 	speed: 0.2,
 }
